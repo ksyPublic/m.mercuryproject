@@ -1,0 +1,95 @@
+/**
+ * Copyright (c) 2020 Spoqa, Inc.
+ *
+ * Permission is hereby granted, free of charge, to any person obtaining
+ * a copy of this software and associated documentation files (the
+ * "Software"), to deal in the Software without restriction, including
+ * without limitation the rights to use, copy, modify, merge, publish,
+ * distribute, sublicense, and/or sell copies of the Software, and to
+ * permit persons to whom the Software is furnished to do so, subject to
+ * the following conditions:
+ *
+ * The above copyright notice and this permission notice shall be
+ * included in all copies or substantial portions of the Software.
+ *
+ * THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
+ * EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
+ * MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND
+ * NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE
+ * LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION
+ * OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION
+ * WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+ */
+
+@font-face {
+    font-family: "spq";
+    font-weight: bold;
+    font-display: fallback;
+    src: local("Spoqa Han Sans Neo Bold"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Bold.woff2") format("woff2"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Bold.woff") format("woff"),
+        url("../font/SpoqaHanSans/SpoqaHanSansNeo-Bold.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "spq";
+    font-weight: 500;
+    font-display: fallback;
+    src: local("Spoqa Han Sans Neo Medium"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Medium.woff2") format("woff2"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Medium.woff") format("woff"),
+        url("../font/SpoqaHanSans/SpoqaHanSansNeo-Medium.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "spq";
+    font-weight: 400;
+    font-display: fallback;
+    src: local("Spoqa Han Sans Neo Regular"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Regular.woff2") format("woff2"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Regular.woff") format("woff"),
+        url("../font/SpoqaHanSans/SpoqaHanSansNeo-Regular.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "spq";
+    font-weight: 300;
+    font-display: fallback;
+    src: local("Spoqa Han Sans Neo Light"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Light.woff2") format("woff2"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Light.woff") format("woff"),
+        url("../font/SpoqaHanSans/SpoqaHanSansNeo-Light.ttf") format("truetype");
+}
+
+@font-face {
+    font-family: "spq";
+    font-weight: 100;
+    font-display: fallback;
+    src: local("Spoqa Han Sans Neo Thin"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Thin.woff2") format("woff2"), url("../font/SpoqaHanSans/SpoqaHanSansNeo-Thin.woff") format("woff"),
+        url("../font/SpoqaHanSans/SpoqaHanSansNeo-Thin.ttf") format("truetype");
+}
+
+//Graphik
+@font-face {
+    font-family: "grp";
+    font-weight: bolder;
+    font-display: fallback;
+    src: url("../font/Graphik/2aa5f6db10ab7b69465c95555c235503.woff2") format("woff2"), url("../font/Graphik/2aa5f6db10ab7b69465c95555c235503.woff") format("woff"),
+        url("../font/Graphik/2aa5f6db10ab7b69465c95555c235503.ttf") format("truetype"), url("../font/Graphik/2aa5f6db10ab7b69465c95555c235503.svg#Graphik Semibold") format("svg");
+}
+
+@font-face {
+    font-family: "grp";
+    font-weight: 500;
+    font-display: fallback;
+    src: url("../font/Graphik/373efd69166d31c2b5052a505527acbf.woff2") format("woff2"), url("../font/Graphik/373efd69166d31c2b5052a505527acbf.woff") format("woff"),
+        url("../font/Graphik/373efd69166d31c2b5052a505527acbf.ttf") format("truetype"), url("../font/Graphik/373efd69166d31c2b5052a505527acbf.svg#Graphik-Medium") format("svg");
+}
+
+@font-face {
+    font-family: "grp";
+    font-weight: 400;
+    font-display: fallback;
+    src: url("../font/Graphik/105007d99d9df64c50cc24d696d79555.woff2") format("woff2"), url("../font/Graphik/105007d99d9df64c50cc24d696d79555.woff") format("woff"),
+        url("../font/Graphik/105007d99d9df64c50cc24d696d79555.ttf") format("truetype"), url("../font/Graphik/105007d99d9df64c50cc24d696d79555.svg#Graphik Web Regular") format("svg");
+}
+
+@font-face {
+    font-family: "grp";
+    font-weight: bold;
+    font-display: fallback;
+    src: url("../font/Graphik/d20eb52d29d9f6d56c1c8fc0eefc560e.woff2") format("woff2"), url("../font/Graphik/d20eb52d29d9f6d56c1c8fc0eefc560e.woff") format("woff"),
+        url("../font/Graphik/d20eb52d29d9f6d56c1c8fc0eefc560e.ttf") format("truetype"), url("../font/Graphik/d20eb52d29d9f6d56c1c8fc0eefc560e.svg#Graphik Bold") format("svg");
+}
