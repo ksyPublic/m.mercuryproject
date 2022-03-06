@@ -5,6 +5,9 @@
     const tabsTarget = document.querySelectorAll(".tabs-title-wrap ul li");
     const tabsContent = document.querySelectorAll(".tabs-content-wrap .tabs-content");
 
+    //button
+    const buttonGroup = document.querySelectorAll(".button-group .button");
+
     function tabsClickedFunc(index) {
         return function (e) {
             [].forEach.call(tabsContent, function (item, i) {
@@ -36,12 +39,35 @@
         }
     }
 
+    function singleButtonGroupClick(e) {
+        const parentButtonChild = e.target.parentElement.querySelectorAll(".button");
+        [].forEach.call(parentButtonChild, function (x) {
+            x.classList.remove("active");
+        });
+        e.target.classList.add("active");
+    }
+    function multipleButtonGroupClick(e) {
+        e.target.classList.toggle("active");
+    }
+
     function eventbindFunc() {
         document.addEventListener("click", function (e) {
             if (e.target.classList.contains("gnb-menu")) {
                 globalMenu(e.target);
             }
         });
+
+        if (buttonGroup.length > 0) {
+            [].forEach.call(buttonGroup, function (x) {
+                if (x.parentElement.dataset.type) {
+                    if (x.parentElement.dataset.type === "single") {
+                        x.addEventListener("click", singleButtonGroupClick, false);
+                    } else {
+                        x.addEventListener("click", multipleButtonGroupClick, false);
+                    }
+                }
+            });
+        }
 
         if (tabsTarget.length > 0) {
             [].forEach.call(tabsTarget, function (x, index) {
