@@ -1,0 +1,624 @@
+//전문적인 트래킹
+.tech-object {
+    position: relative;
+    height: 24rem;
+    + .text-area {
+        margin-top: 3.5rem;
+    }
+    .tech-rt-wrap {
+        position: absolute;
+        bottom: 2.1rem;
+        font-size: 0px;
+        width: 100%;
+        left: 50%;
+        transform: translateX(-50%);
+        .tech-box {
+            position: absolute;
+            bottom: 0;
+            &:first-child {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            &.top {
+                top: -13.8rem;
+                width: 8.1rem;
+                height: 8.1rem;
+                background: url("../img/tech-object01.png") no-repeat;
+                background-size: 100%;
+
+                &:after {
+                    content: "";
+                    position: absolute;
+                    bottom: -5.9rem;
+                    left: 50%;
+                    transform: translateX(-50%);
+                    width: 4rem;
+                    height: 3rem;
+                    background: url("../img/tech-arrow.png") no-repeat;
+                    background-size: 100%;
+                }
+            }
+
+            &.left {
+                width: 8.1rem;
+                height: 8.1rem;
+                background: url("../img/tech-object02.png") no-repeat;
+                background-size: 100%;
+                &.tech {
+                    left: 0;
+                }
+                &:after {
+                    content: "or";
+                    position: absolute;
+                    right: -2.7rem;
+                    top: 3rem;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    font-family: "grp", sans-serif;
+                    color: #b3b3b3;
+                }
+                left: 25%;
+            }
+
+            &.center {
+                width: 8.1rem;
+                height: 8.1rem;
+                background: url("../img/tech-object03.png") no-repeat;
+                background-size: 100%;
+                &:after {
+                    content: "or";
+                    position: absolute;
+                    right: -2.7rem;
+                    top: 3rem;
+                    font-size: 2rem;
+                    font-weight: 400;
+                    font-family: "grp", sans-serif;
+
+                    color: #b3b3b3;
+                }
+            }
+
+            &.right {
+                width: 8.1rem;
+                height: 8.1rem;
+                background: url("../img/tech-object04.png") no-repeat;
+                background-size: 100%;
+                right: 25%;
+                &.tech {
+                    right: 0;
+                }
+            }
+
+            span {
+                position: absolute;
+                bottom: -2.2rem;
+                left: 50%;
+                transform: translateX(-50%);
+                white-space: nowrap;
+                font-size: 1.2rem;
+                font-family: "spq", sans-serif;
+            }
+        }
+
+        .tech-box:not(:first-child) {
+            position: relative;
+            display: inline-block;
+            width: 8.1rem;
+            height: 8.1rem;
+            margin-left: 3.3rem;
+        }
+
+        .tech-box:nth-child(2) {
+            margin-left: 0px;
+        }
+    }
+}
+.viewability-object {
+    text-align: center;
+    .viewability-text-area {
+        + .circle-wrap {
+            margin-top: 0.7rem;
+        }
+    }
+    .viewability-arrow {
+        margin-top: -0.9rem;
+        color: $base-color;
+        font-family: "grp", sans-serif;
+        font-weight: 500;
+        font-size: 1.2rem;
+        text-align: center;
+        line-height: 1.4rem;
+        text-transform: uppercase;
+        &:after {
+            content: "";
+            margin: 0 auto;
+            margin-top: -1.3rem;
+            width: 12.5rem;
+            height: 4.4rem;
+            display: block;
+            background: url("../img/circle-arrow-bg.png") no-repeat;
+            background-size: 100%;
+        }
+    }
+    .radius-box {
+        margin-top: 0.9rem;
+        border-radius: 1rem;
+        height: 2rem;
+        background-color: $base-color;
+        padding: 0 1rem;
+        line-height: 2.2rem;
+        display: inline-block;
+        text-transform: uppercase;
+        color: $white;
+        text-align: center;
+        font-family: "grp", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        + .text {
+            margin-top: 0.7rem;
+        }
+    }
+
+    .text {
+        display: block;
+        color: $base-color;
+        font-family: "grp", sans-serif;
+        font-size: 1.2rem;
+        font-weight: 500;
+        text-transform: uppercase;
+        line-height: 1.3rem;
+    }
+}
+
+.circle-wrap {
+    position: relative;
+    font-size: 0;
+    display: flex;
+    justify-content: center;
+    .circle-multi {
+        position: relative;
+        .circle {
+            margin-left: 0;
+        }
+    }
+    .circle-box {
+        left: 50%;
+        width: 100%;
+        height: 100%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 10;
+        position: absolute;
+        .circle {
+            text-transform: uppercase;
+            font-size: 1.1rem;
+            font-family: "grp", sans-serif;
+            height: 4rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 2rem;
+            text-align: center;
+            width: 9rem;
+            border: 0.1rem solid $base-color;
+            line-height: 1.2rem;
+            position: absolute;
+            &.left.top {
+                left: -5rem;
+                top: 0;
+            }
+            &.right.top {
+                right: -5rem;
+                top: 0;
+            }
+            &.left.bottom {
+                left: -5rem;
+                bottom: 0;
+            }
+            &.right.bottom {
+                right: -5rem;
+                bottom: 0;
+            }
+            &:before {
+                display: none;
+            }
+        }
+    }
+    .circle {
+        display: inline-block;
+        vertical-align: top;
+        position: relative;
+        margin-left: 2rem;
+
+        &.before-arrow {
+            &:before {
+                z-index: 10;
+                display: block;
+                content: "";
+                position: relative;
+                top: -11rem;
+                width: 7.1rem;
+                height: 100%;
+                background: url("../img/circle-arrow.png") no-repeat center bottom;
+                background-size: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        &.after-arrow {
+            &:after {
+                z-index: 10;
+                display: block;
+                content: "";
+                position: relative;
+                top: 5rem;
+                width: 7.1rem;
+                height: 100%;
+                background: url("../img/circle-arrow.png") no-repeat center bottom;
+                background-size: 100%;
+                margin: 0 auto;
+            }
+        }
+
+        &:first-child {
+            margin-left: 0;
+        }
+
+        + .circle {
+            &.grey {
+                &:before {
+                    background: url("../img/circle-plus-grey.png") no-repeat;
+                    background-size: 100%;
+                }
+            }
+            &.orange {
+                &:before {
+                    background: url("../img/circle-plus-orange.png") no-repeat;
+                    background-size: 100%;
+                }
+            }
+            &:before {
+                top: calc(50% - 1.6rem);
+                position: absolute;
+                left: -2.6rem;
+                content: "";
+                width: 3.1rem;
+                height: 3.1rem;
+            }
+        }
+
+        &.grey {
+            + .orange {
+                &:before {
+                    background: url("../img/circle-plus-grey.png") no-repeat;
+                    background-size: 100%;
+                }
+            }
+        }
+
+        width: 13rem;
+        height: 13rem;
+        border-radius: 50%;
+        border: 0.1rem solid transparent;
+        .flex {
+            width: 100%;
+            position: absolute;
+            text-align: center;
+            top: 50%;
+            left: 50%;
+            display: block;
+            height: auto;
+            transform: translate(-50%, -50%);
+        }
+        p {
+            font-size: 1.2rem;
+            line-height: 1.5rem;
+            font-weight: bold;
+        }
+        span {
+            margin-top: 0.4rem;
+            display: block;
+            font-size: 1.1rem;
+            line-height: 1.375rem;
+        }
+        &.grey {
+            background-color: $white;
+            border: 0.1rem solid #b3b3b3;
+        }
+
+        &.orange {
+            background-color: $white;
+            border: 0.1rem solid $base-color;
+            color: $base-color;
+        }
+    }
+}
+
+.operations-wrap {
+    .circle {
+        p {
+            font-size: 1.5rem;
+            text-transform: uppercase;
+            font-family: "grp", sans-serif;
+        }
+    }
+
+    .circle-wrap {
+        + .circle-wrap {
+            margin-top: 1.4rem;
+        }
+    }
+}
+
+.clients-wrap {
+    margin-left: -0.5rem;
+    margin-top: -0.5rem;
+    margin-bottom: -2rem;
+    font-size: 0;
+    text-align: center;
+    // margin-left: 2rem;
+    &:after {
+        content: "";
+        clear: both;
+        display: block;
+    }
+
+    span {
+        display: block;
+        width: 8rem;
+        height: 8rem;
+        float: left;
+        margin-left: 2rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.analysis-wrap {
+    dl.analysis {
+        margin-top: 2.7rem;
+        &:first-child {
+            margin-top: 0;
+        }
+        text-align: center;
+        &.ins {
+            dt {
+                background: url("../img/analysis-object-images01.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+
+        &.cam {
+            dt {
+                background: url("../img/analysis-object-images02.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+
+        &.site {
+            dt {
+                background: url("../img/analysis-object-images03.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+        dd {
+            span {
+                font-family: "spq", sans-serif;
+                font-weight: bold;
+                font-size: 1.4rem;
+                position: relative;
+                top: -0.1rem;
+            }
+        }
+        dt {
+            margin: 0 auto;
+            width: 10.1rem;
+            height: 10.1rem;
+
+            + dd {
+                margin-top: 1.3rem;
+                font-family: "grp", sans-serif;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: $base-color;
+                text-transform: uppercase;
+                + dd {
+                    margin-top: 0.5rem;
+                    font-size: 1.1rem;
+                    line-height: 1.5rem;
+                }
+            }
+        }
+    }
+}
+
+.coverage-object {
+    margin-top: 8.2rem;
+    margin-bottom: 4.4rem;
+    .coverage-wrap {
+        .polygon {
+            margin: 0 auto;
+            &.top {
+                top: -2.8rem;
+                height: 5.5rem;
+            }
+
+            &.bottom {
+                height: 4.5rem;
+
+                bottom: -2.3rem;
+                span {
+                    font-size: 1.4rem;
+                }
+            }
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 6.2rem;
+            z-index: 10;
+            position: relative;
+            text-align: center;
+            span {
+                position: absolute;
+                left: 0;
+                right: 0;
+                top: 50%;
+                transform: translateY(-50%);
+                font-family: "grp", sans-serif;
+                font-weight: 500;
+                color: $white;
+                line-height: 1.2rem;
+                font-size: 1.1rem;
+            }
+            &:before {
+                content: "";
+                position: absolute;
+                width: 6.2rem;
+                height: 6.2rem;
+                background-color: $base-color;
+                transform: rotate(-45deg);
+            }
+        }
+        .coverage-bg {
+            margin: 0 auto;
+            width: 19.2rem;
+            border: 0.1rem solid $base-color;
+            position: relative;
+            font-size: 0;
+            &:after {
+                position: absolute;
+                content: "ONLINE";
+                bottom: -1.7rem;
+                left: 0;
+                font-size: 1.1rem;
+                font-weight: 500;
+                color: #999999;
+            }
+
+            &:before {
+                position: absolute;
+                bottom: -1.7rem;
+                right: 0;
+                content: "OFFLINE";
+                font-weight: 500;
+                font-size: 1.1rem;
+                color: #999999;
+            }
+            .coverage-box-wrap {
+                position: relative;
+                text-align: center;
+            }
+            .coverage-box {
+                margin-right: 1.5rem;
+                display: inline-block;
+                vertical-align: top;
+                background-color: $white;
+                &:first-child {
+                    margin-left: -6rem;
+                }
+
+                &:last-child {
+                    margin-right: -6rem;
+                }
+
+                span {
+                    &:first-child {
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        background-color: #bdbdbd;
+                        font-family: "grp", sans-serif;
+                        font-size: 1.1rem;
+                        line-height: 1.2rem;
+                        font-weight: bold;
+                        text-transform: uppercase;
+                        margin-top: 0;
+                    }
+                    margin-top: 1rem;
+                    display: block;
+                    width: 8rem;
+                    height: 8rem;
+                }
+            }
+            .coverage-center-liner {
+                top: 0;
+                left: calc(50% - 0.1rem);
+                position: absolute;
+                margin: 0 auto;
+                width: 0.1rem;
+                height: 100%;
+                background-color: $base-color;
+            }
+        }
+    }
+}
+
+.audience-wrap {
+    .audience-box {
+        margin-top: 2rem;
+        display: flex;
+        justify-content: center;
+        .image {
+            margin-left: 4rem;
+            &:first-child {
+                margin-left: 0;
+            }
+            position: relative;
+            margin-bottom: 1.8rem;
+            span {
+                left: 50%;
+                transform: translateX(-50%);
+                position: absolute;
+                font-family: "grp", sans-serif;
+                font-weight: 500;
+                font-size: 1.1rem;
+                letter-spacing: -0.025rem;
+                white-space: nowrap;
+                color: $base-color;
+                bottom: -1.8rem;
+                text-align: center;
+            }
+        }
+
+        .audience-object- {
+            &image01 {
+                width: 6.6rem;
+                height: 6.6rem;
+                background: url("../img/audience-object-images01.png") no-repeat;
+                background-size: 100%;
+            }
+            &image02 {
+                width: 6.6rem;
+                height: 6.6rem;
+                background: url("../img/audience-object-images02.png") no-repeat;
+                background-size: 100%;
+            }
+            &image03 {
+                width: 6.6rem;
+                height: 6.6rem;
+                background: url("../img/audience-object-images03.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+    .title {
+        line-height: 1.5rem;
+        text-transform: uppercase;
+        + .circle-wrap {
+            margin-top: 1.2rem;
+            + .title {
+                margin-top: 6.1rem;
+            }
+        }
+    }
+    .circle-wrap {
+        + .circle-wrap {
+            margin-top: 5.9rem;
+            .circle {
+                text-transform: uppercase;
+                font-family: "grp", sans-serif;
+                font-weight: 500;
+            }
+        }
+    }
+}

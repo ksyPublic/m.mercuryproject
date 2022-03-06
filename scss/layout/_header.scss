@@ -1,0 +1,79 @@
+.header {
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.3);
+    padding: 0 2rem;
+    position: fixed;
+    width: 100%;
+    z-index: 9999;
+    top: 0;
+    left: 0;
+
+    .logo {
+        a {
+            display: block;
+            width: 4.5rem;
+            height: 3.5rem;
+            transition: 1s cubic-bezier(0.23, 1, 0.32, 1), background 1s cubic-bezier(0.23, 1, 0.32, 1);
+            background: url("../img/logo.png");
+            background-size: 100%;
+        }
+        &.active {
+            a {
+                transition: 1s cubic-bezier(0.23, 1, 0.32, 1), background 1s cubic-bezier(0.23, 1, 0.32, 1);
+                background: url("../img/logo-on.png");
+                background-size: 100%;
+            }
+        }
+    }
+
+    .gnb {
+        position: absolute;
+        right: 1.8rem;
+        top: 2.6rem;
+        &.active {
+            //
+            .gnb-menu {
+                &:before {
+                    margin-top: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    transform: rotate(225deg) translateZ(0);
+                }
+
+                &:after {
+                    margin-top: 0;
+                    width: 100%;
+                    background-color: #fff;
+                    transform: rotate(-45deg) translateZ(0);
+                }
+            }
+        }
+        &-menu {
+            width: 2.5rem;
+            height: 2.5rem;
+            display: block;
+            &:before {
+                margin-top: -0.8rem;
+            }
+            &:before,
+            &:after {
+                pointer-events: none;
+                display: block;
+                position: absolute;
+                content: "";
+                width: 2rem;
+                height: 0.2rem;
+                background-color: #e96406;
+                top: 50%;
+                transition: 1s cubic-bezier(0.23, 1, 0.32, 1), background-color 1s cubic-bezier(0.23, 1, 0.32, 1);
+            }
+
+            &:after {
+                margin-top: 0.2rem;
+                transform: translateY(3.75px) translateZ(0);
+            }
+        }
+    }
+}
