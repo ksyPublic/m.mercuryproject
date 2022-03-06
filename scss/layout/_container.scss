@@ -42,6 +42,9 @@
         }
     }
     &-wrapper {
+        .submit {
+            padding: 0;
+        }
         .title {
             font-weight: bold;
             text-align: center;
@@ -122,6 +125,16 @@
     }
 }
 
+#recruit {
+    .text-area {
+        dl {
+            dd + dd {
+                margin-top: 1.2rem;
+            }
+        }
+    }
+}
+
 .text-area {
     text-align: left;
     + .viewability-object,
@@ -129,6 +142,9 @@
     + .audience-object,
     + .analysis-object {
         margin-top: 3.6rem;
+    }
+    + .submit {
+        margin-top: 1.6rem;
     }
     ul {
         li {
@@ -153,6 +169,31 @@
             }
         }
         dd {
+            h4 {
+                font-family: "spq", sans-serif;
+                font-weight: bold;
+                font-size: 1.4rem;
+                margin-bottom: 0.4rem;
+                ~ span {
+                    font-weight: 400;
+                    font-family: "spq", sans-serif;
+                    line-height: 2rem;
+                    font-size: 1.4rem;
+                    display: flex;
+                    &:before {
+                        content: "";
+                        display: inline-block;
+                        vertical-align: top;
+                        position: relative;
+                        width: 0.5rem;
+                        height: 0.5rem;
+                        top: 0.6rem;
+                        margin-right: 0.7rem;
+                        transform: rotate(-45deg);
+                        background-color: #e96406;
+                    }
+                }
+            }
             + dd {
                 margin-top: 1rem;
             }
@@ -282,8 +323,31 @@
     }
 }
 
+#address {
+    .flex {
+        height: 24.3rem;
+    }
+}
+
 .address-contents {
-    //
+    margin-top: -0.3rem;
+    p {
+        font-size: 1.6rem;
+        line-height: 2rem;
+        font-weight: 400;
+        font-family: "spq", sans-serif;
+    }
+    a {
+        display: block;
+        margin-top: 1.8rem;
+        font-size: 2.4rem;
+        font-weight: bold;
+        font-family: "spq", sans-serif;
+    }
+}
+.address-img {
+    width: calc(100% - 1.6rem);
+    margin: 0.9rem auto 0;
 }
 
 .submit {

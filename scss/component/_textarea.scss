@@ -1,0 +1,28 @@
+textarea {
+    &.textarea {
+        resize: none;
+        border-radius: 0;
+        border: 0.1rem solid #d5d5d5;
+        min-height: 15rem;
+        font-size: 1.3rem;
+        padding: 0.8rem 0.8rem;
+        color: #000;
+        &:focus {
+            border-color: #e96406;
+        }
+        + span {
+            display: block;
+            margin-top: 0.7rem;
+            font-weight: 400;
+            font-size: 1.3rem;
+            font-family: "spq", sans-serif;
+            font-weight: 400;
+            line-height: 1.8rem;
+            color: #888888;
+        }
+        &::placeholder {
+            font-size: 1.3rem;
+            color: #888;
+        }
+    }
+}

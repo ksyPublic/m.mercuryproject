@@ -622,3 +622,46 @@
         }
     }
 }
+
+.form {
+    &-fields {
+        + .form-fields {
+            margin-top: 3rem;
+        }
+        h2 {
+            font-size: 1.4rem;
+            font-family: "spq", sans-serif;
+            font-weight: bold;
+        }
+        .form-field {
+            margin-top: 1rem;
+            .input {
+                + .input {
+                    margin-top: 1rem;
+                }
+            }
+            .button-group {
+                font-size: 0;
+                margin-left: -1rem;
+                margin-bottom: -1rem;
+            }
+            .button {
+                margin-left: 1rem;
+                width: calc(50% - 1rem);
+                margin-bottom: 1rem;
+            }
+        }
+    }
+    + .button-group {
+        margin: 4rem;
+    }
+}
+
+.button-group {
+    font-size: 0;
+    margin-left: -1rem;
+    .button {
+        margin-left: 1rem;
+        width: calc(50% - 1rem);
+    }
+}

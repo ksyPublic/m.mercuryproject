@@ -25,17 +25,14 @@
         menu.classList.toggle("active");
         logo.classList.toggle("active");
         menuWrapper.classList.toggle("active");
-        const _childBox = menuFrame.contentWindow.document.querySelector(".menu-box");
-        const _childLag = menuFrame.contentWindow.document.querySelector(".change-language");
+        const _childBox = menuFrame.contentWindow.document.querySelector(".ly-menu");
 
         if (menu.classList.contains("active")) {
             //active가 있을때 메뉴 오픈
             _childBox.classList.add("open");
-            _childLag.classList.add("open");
         } else {
             //active가 없을때 메뉴 닫힘
             _childBox.classList.remove("open");
-            _childLag.classList.remove("open");
         }
     }
 
@@ -93,14 +90,12 @@ function clickMenuFocus(props) {
     const menuWrapper = window.parent.document.querySelector(".ly-iframe-wrap");
     const menuFrame = window.parent.document.querySelector("#globalMenu");
 
-    const _childBox = document.querySelector(".menu-box");
-    const _childLag = document.querySelector(".change-language");
+    const _childBox = document.querySelector(".ly-menu");
     if (props) {
         menuWrapper.classList.remove("active");
         menu.classList.remove("active");
         logo.classList.remove("active");
         _childBox.classList.remove("open");
-        _childLag.classList.remove("open");
 
         if (props === "WWD") {
             window.parent.location.href = "/pages/whatwedo.html";
@@ -110,4 +105,12 @@ function clickMenuFocus(props) {
             window.parent.location.href = "/pages/contactus.html";
         }
     }
+}
+
+function openPopup(props) {
+    props.classList.add("open");
+}
+
+function closePopup(props) {
+    props.classList.remove("open");
 }

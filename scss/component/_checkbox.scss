@@ -1,0 +1,33 @@
+.checkbox {
+    //
+    display: none;
+    &:checked {
+        + label {
+            &:before {
+                background: url("../img/checkbox-after.png") no-repeat;
+                background-size: 100%;
+            }
+        }
+    }
+    + label {
+        font-size: 1.4rem;
+        font-weight: bold;
+        font-family: "spq", sans-serif;
+        color: #000;
+        line-height: 2.2rem;
+        &:before {
+            content: "";
+            display: inline-block;
+            vertical-align: top;
+            width: 2rem;
+            height: 2rem;
+            margin-right: 1rem;
+            background: url("../img/checkbox-before.png") no-repeat;
+            background-size: 100%;
+        }
+        span {
+            color: #e96406;
+            text-decoration: underline;
+        }
+    }
+}

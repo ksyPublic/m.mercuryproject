@@ -1,0 +1,32 @@
+select {
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    -o-appearance: none;
+    appearance: none;
+    &.select {
+        height: 3.3rem;
+        width: 100%;
+        border: 0;
+        border-radius: 0;
+        border-bottom: 0.1rem solid #d5d5d5;
+        background: url("../img/select-arrow.png") no-repeat right top 50%;
+        background-size: 1.7rem 1rem;
+        color: #888;
+        font-size: 1.3rem;
+        font-family: "spq", sans-serif;
+        font-weight: 400;
+        padding-right: 2rem;
+        &:focus {
+            border-color: #e96406;
+        }
+        option {
+            &:checked {
+                color: #000 !important;
+            }
+        }
+    }
+}
+
+select::-ms-expand {
+    display: none;
+}

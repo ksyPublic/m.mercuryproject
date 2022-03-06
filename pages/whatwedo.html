@@ -578,7 +578,7 @@
                     <!-- //Clients 영역 -->
                 </div>
                 <div class="submit">
-                    <a href="#none" class="button">문의하기</a>
+                    <a href="#none" class="button" onclick="openPopup(popup)">문의하기</a>
                 </div>
                 <div class="footer">
                     <a href="#none">개인정보 처리방침</a>
@@ -588,6 +588,123 @@
         </div>
         <div class="ly-iframe-wrap">
             <iframe src="menu.html" id="globalMenu"></iframe>
+        </div>
+
+        <div class="dimmer" id="popup">
+            <div class="popup">
+                <div class="popup-header">
+                    <div class="title-area">
+                        <div class="title-area-left">문의하기</div>
+                        <div class="title-area-right">
+                            <a href="javascript:void(0)" onclick="closePopup(popup)">
+                                <img src="../img/popup-close.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-contents">
+                    <div class="ui form">
+                        <div class="form-fields">
+                            <h2>캠페인의 대상 지역</h2>
+                            <div class="form-field">
+                                <div class="button-group" data-type="single">
+                                    <button class="button basic active">국내</button>
+                                    <button class="button basic">국외</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>진행하고 싶은 캠페인의 광고주/브랜드명</h2>
+                            <div class="form-field">
+                                <input type="text" placeholder="캠페인 광고주/브랜드명입니다." class="input" />
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>캠페인을 통해 얻고 싶은 성과 (중복선택 가능)</h2>
+                            <div class="form-field">
+                                <div class="button-group" data-type="multiple">
+                                    <button class="button basic">브랜드 인지도 증가</button>
+                                    <button class="button basic">브랜드 메시지/이미지</button>
+                                    <button class="button basic">신규 이용자 확보</button>
+                                    <button class="button basic">서비스 활성화</button>
+                                    <button class="button basic">전환 및 구매증가</button>
+                                    <button class="button basic">기타</button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>집행을 고려하고 있는 매체</h2>
+                            <div class="form-field">
+                                <select class="select">
+                                    <option checked hidden>매체를 선택해 주세요.</option>
+                                    <option value="매체1">매체1</option>
+                                    <option value="매체2">매체2</option>
+                                    <option value="매체3">매체3</option>
+                                    <option value="매체4">매체4</option>
+                                    <option value="매체5">매체5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>캠페인 예산 규모</h2>
+                            <div class="form-field">
+                                <select class="select">
+                                    <option checked hidden>예산을 선택해 주세요.</option>
+                                    <option value="예산1">예산1</option>
+                                    <option value="예산2">예산2</option>
+                                    <option value="예산3">예산3</option>
+                                    <option value="예산4">예산4</option>
+                                    <option value="예산5">예산5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>캠페인 예상 시기</h2>
+                            <div class="form-field">
+                                <select class="select">
+                                    <option checked hidden>예상 시기를 선택해 주세요.</option>
+                                    <option value="예상1">예상1</option>
+                                    <option value="예상2">예상2</option>
+                                    <option value="예상3">예상3</option>
+                                    <option value="예상4">예상4</option>
+                                    <option value="예상5">예상5</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>문의하실 내용</h2>
+                            <div class="form-field">
+                                <textarea class="textarea" placeholder="문의하실 내용을 입력해 주세요."></textarea>
+                                <span>
+                                    캠페인을 집행하실 브랜드/서비스의 진행상태 (신규 런칭, 리브랜딩, 연간 캠페인, 이벤트 진행 등)와 캠페인 타킷 및 고려 매체 등을 자세하게 기입해 주시면 정확한 답변을
+                                    드리겠습니다.
+                                </span>
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <h2>의뢰인 정보</h2>
+                            <div class="form-field">
+                                <input type="text" placeholder="이름을 입력해 주세요. (필수)" class="input" required />
+                                <input type="text" placeholder="이메일을 입력해 주세요. (필수)" class="input" required />
+                                <input type="text" placeholder="연락처를 입력해 주세요. (필수)" class="input" required />
+                                <input type="text" placeholder="회사명을 입력해 주세요." class="input" required />
+                                <input type="text" placeholder="부서명을 입력해 주세요." class="input" required />
+                                <input type="text" placeholder="직함을 입력해 주세요." class="input" required />
+                            </div>
+                        </div>
+                        <div class="form-fields">
+                            <div class="form-field">
+                                <input class="checkbox" type="checkbox" id="chk1" />
+                                <label for="chk1"><span>개인정보 수집 및 이용</span>에 동의합니다.</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="button-group">
+                        <button class="button cancel" onclick="closePopup(popup)">취소</button>
+                        <button class="button save" onclick="closePopup(popup)">확인</button>
+                    </div>
+                </div>
+            </div>
         </div>
     </body>
     <script>

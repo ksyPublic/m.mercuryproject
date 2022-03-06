@@ -1,0 +1,37 @@
+.button {
+    width: 100%;
+    display: inline-block;
+    vertical-align: top;
+    height: 4rem;
+    font-weight: 400;
+    font-family: "spq", sans-serif;
+    font-size: 1.3rem;
+
+    &.basic {
+        background-color: #fff;
+        border: 0.1rem solid #b5b5b5;
+        color: #888888;
+        &.active {
+            background-color: #e96406;
+            border-color: #e96406;
+            color: #fff;
+        }
+    }
+
+    &.cancel,
+    &.save {
+        height: 5rem;
+        color: #fff;
+        font-weight: 400;
+        font-size: 1.6rem;
+        font-family: "spq", sans-serif;
+    }
+
+    &.cancel {
+        background-color: #9c9c9c;
+    }
+
+    &.save {
+        background-color: #000;
+    }
+}
