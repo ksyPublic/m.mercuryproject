@@ -124,11 +124,11 @@ function clickMenuFocus(props) {
         _childBox.classList.remove("open");
 
         if (props === "WWD") {
-            window.parent.location.href = "/pages/whatwedo.html";
+            window.parent.location.href = "pages/whatwedo.html";
         } else if (props === "WWA") {
-            window.parent.location.href = "/pages/whoweare.html";
+            window.parent.location.href = "pages/whoweare.html";
         } else {
-            window.parent.location.href = "/pages/contactus.html";
+            window.parent.location.href = "pages/contactus.html";
         }
     }
 }
