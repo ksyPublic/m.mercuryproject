@@ -81,8 +81,7 @@ function gsap_all_animation() {
 
     if (trs100.length > 0) {
         const KTRS100 = gsap.utils.toArray(".kr .trs100");
-        const ENGTRS100 = gsap.utils.toArray(".eng #aboutus .trs100");
-        const ENGTRS100_AN = gsap.utils.toArray(".eng .trs100");
+        const ENGTRS100 = gsap.utils.toArray(".eng .trs100");
         KTRS100.forEach((trs, index) => {
             gsap.from(trs, {
                 scrollTrigger: {
@@ -99,21 +98,6 @@ function gsap_all_animation() {
         });
 
         ENGTRS100.forEach((trs, index) => {
-            gsap.from(trs, {
-                scrollTrigger: {
-                    trigger: trs,
-                    scroller: "[data-scroll-container]",
-                    scrub: true,
-                    end: "+=100%",
-                    //onUpdate: (self) => console.log(self.direction),
-                },
-                translateY: 180,
-                opacity: 0,
-                ease: "power2",
-            });
-        });
-
-        ENGTRS100_AN.forEach((trs, index) => {
             gsap.from(trs, {
                 scrollTrigger: {
                     trigger: trs,
