@@ -1,23 +1,23 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="eng">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="../scss/style.css" />
+        <link rel="stylesheet" href="../../scss/style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="../js/common.js" defer></script>
+        <script src="../../js/vendor/gsap.js"></script>
+        <script src="../../js/vendor/gsap-scrollTrigger.js"></script>
+        <script src="../../js/vendor/locomotive.min.js"></script>
+        <script src="../../js/vendor/masonry.js"></script>
+        <script src="../../js/common.js" defer></script>
 
         <title>머큐리프로젝트 - 모바일</title>
     </head>
-    <body>
+    <body class="eng">
         <div class="app">
             <div class="ly-container">
-                <div class="ly-contents">
+                <div class="ly-contents" data-scroll-container>
                     <!-- tech-consulting 영역 -->
                     <section class="section" id="techconsulting">
                         <div class="section-wrapper">
@@ -30,29 +30,43 @@
                             <div class="tech-object" id="tech-object">
                                 <div class="tech-rt-wrap">
                                     <div class="tech-box top tech">
-                                        <span>실제성과</span>
+                                        <span>Actual Performance</span>
                                     </div>
                                     <div class="tech-box left tech">
-                                        <span>중복성과</span>
+                                        <span
+                                            >Duplicate<br />
+                                            Performance</span
+                                        >
                                     </div>
                                     <div class="tech-box center tech">
-                                        <span>비성과 측정</span>
+                                        <span
+                                            >Specific Performance<br />
+                                            Measurement</span
+                                        >
                                     </div>
                                     <div class="tech-box right tech">
-                                        <span>성과누수</span>
+                                        <span
+                                            >Pperformance<br />
+                                            Leaks</span
+                                        >
                                     </div>
                                 </div>
                             </div>
                             <div class="text-area">
                                 <ul>
                                     <li>
-                                        트랙킹은 디지털 광고의 정확한 성과 측정을 위한 가장 기본적인 작업으로, 비전문적인 트랙킹 작업은 광고 성과의 누수 또는 과잉 측정 결과를 보여주기도 합니다. 이런
-                                        부정확한 트랙킹 결과로 매체별 효과 분석 오류가 발생하고 추후 전체 디지털 캠페인 성과 개선 작업에 큰 지장을 초래하게 됩니다. 반대로, 각 솔루션별 특장점을 고려,
-                                        다양한 디지털 캠페인의 KPI에 맞춘 전문적인 트랙킹 설정은 정확한 매체별 성과 분석을 가능하게 합니다.
+                                        <span class="trs100">
+                                            A tracking work is the essential task to measure the performance of digital advertising. Unprofessional tracking works may bring out the loss or excess
+                                            figures in campaign report, the situation resulting out the incorrect evaluation of each media and finally the massive negative impact on overall campaign
+                                            optimization. On the other hands, the professionally configured tracking works with the comprehensive understanding of each media and various KPI of digital
+                                            campaigns, facilitates accurate measurement about media, continuing to the success of the campaign.
+                                        </span>
                                     </li>
                                     <li>
-                                        머큐리프로젝트는 글로벌 트랙킹 솔루션 GTM를 기반으로 다양한 유형의 트랙킹 솔루션과 연동하여 기본적인 광고유입 및 사이트 분석을 넘어, 온라인 매출 연계를 위한
-                                        전자상거래 설정을 지원합니다.
+                                        <span class="trs100">
+                                            MERCURY PROJECT integrates GTM(Google Tag Manager) with various global tracking solutions to correlate the campaign performance with online sales rather
+                                            than just to analyze the basic site traffic or site structures.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -72,23 +86,33 @@
                             <div class="text-area">
                                 <ul>
                                     <li>
-                                        바야흐로 이 시대 미디어의 화두는 MEDIA VIEWA- BILITY 입니다.<br />
-                                        지금은 채널 중심의 노출이 아닌, 미디어 컨텍스트 중심 의 시청(視聽)을 살펴봐야할 때입니다.
+                                        <span class="trs100">
+                                            A viewability is an online advertising metric that aims to track only impressions that can actually be seen by users.<br />
+                                            The recent keyword of digital advertising is “Media Viewability”.<br />
+                                            We are facing the period of focusing on the viewability based on the media context, not on just channel of media.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="viewability-object" id="viewability-object">
                                 <div class="viewability-wrap">
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn01">
                                         <div class="circle grey">
                                             <div class="flex">
-                                                <p>얼마나 많이<br />노출되었는가?</p>
+                                                <p>
+                                                    How much <br />
+                                                    was exposed?
+                                                </p>
                                                 <span>GRPs / Imps / View</span>
                                             </div>
                                         </div>
                                         <div class="circle grey">
                                             <div class="flex">
-                                                <p>얼마나 많은 <br />브랜드 콘텐츠가 <br />배포되었는가?</p>
+                                                <p>
+                                                    How much<br />
+                                                    branded content<br />
+                                                    was distributed?
+                                                </p>
                                                 <span
                                                     >Number of Branded<br />
                                                     Contents</span
@@ -96,7 +120,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="viewability-text-area">
+                                    <div class="viewability-text-area fn02">
                                         <div class="viewability-arrow">
                                             Awareness<br />
                                             Preference<br />
@@ -106,12 +130,13 @@
                                         <div class="radius-box">loyalty</div>
                                         <div class="text">share of sales</div>
                                     </div>
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn03">
                                         <div class="circle orange">
                                             <div class="flex">
                                                 <p>
-                                                    얼마나 많이 <br />
-                                                    보았는가?
+                                                    How many<br />
+                                                    people have<br />
+                                                    seen it?
                                                 </p>
                                                 <span
                                                     >Real GRPs /<br />
@@ -122,15 +147,15 @@
                                         <div class="circle orange">
                                             <div class="flex">
                                                 <p>
-                                                    얼마나 많은<br />
-                                                    소비자들이<br />
-                                                    공감할 수 있는가?
+                                                    How many<br />
+                                                    consumers can<br />
+                                                    empathize?
                                                 </p>
                                                 <span>Engage Relate to</span>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="viewability-text-area">
+                                    <div class="viewability-text-area fn04">
                                         <div class="text">
                                             Mercury<br />
                                             Media Viewability
@@ -154,32 +179,45 @@
                             <div class="text-area">
                                 <ul>
                                     <li>
-                                        종합적인 측면에서의 마케팅 퍼널을 고려한다면 목표 오디언스는 하나로 정의 될 수 없습니다.<br />
-                                        머큐리프로젝트는 다양한 데이터를 복합적으로 활용, 마케팅 각 단계에 맞는 맞춤형 타겟 플래닝을 하고 있습니다.
+                                        <span class="trs100">
+                                            An audience planning is the most advanced media planning methodology that can enable marketers to deliver the communication message more effectively by
+                                            defining the target segment, the fundamental decision element of campaigns, suitable for the various circumstances, rather than by buying media channels in
+                                            legacy.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="trs100">
+                                            Given that considering the marketing funnels in overall aspect, target segment cannot be defined as a one persona type. Utilizing plenty of data
+                                            comprehensively, MERCURY PROJECT provides target audience planning, tailored for each step of the advertising campaign.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="audience-object" id="audience-object">
                                 <div class="audience-wrap">
-                                    <h2 class="title">일반적인 오디언스 플래닝</h2>
+                                    <h2 class="title fn01">
+                                        General audience <br />
+                                        planning
+                                    </h2>
 
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn02">
                                         <div class="circle grey after-arrow">
                                             <div class="flex">
                                                 <p>
-                                                    나이 / 성별<br />
-                                                    거주지역 / 구매유무<br />
-                                                    제품 카테고리<br />
-                                                    관심유무
+                                                    Age / Gender<br />
+                                                    Residence /<br />
+                                                    Purchasing<br />
+                                                    Interested in product<br />
+                                                    category
                                                 </p>
                                             </div>
                                         </div>
                                     </div>
-                                    <h2 class="title orange">
+                                    <h2 class="title orange fn03">
                                         Mercury Smart Audience<br />
                                         Funnel Planning
                                     </h2>
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn04">
                                         <div class="circle-multi">
                                             <div class="circle-box">
                                                 <div class="circle orange left top">google<br />dmp</div>
@@ -190,16 +228,17 @@
                                             <div class="circle orange after-arrow">
                                                 <div class="flex">
                                                     <p>
-                                                        나이 / 성별<br />
-                                                        거주지역 / 구매유무<br />
-                                                        제품 카테고리<br />
-                                                        관심유무
+                                                        Age / Gender<br />
+                                                        Residence /<br />
+                                                        Purchasing<br />
+                                                        Interested in product<br />
+                                                        category
                                                     </p>
                                                 </div>
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn05">
                                         <div class="circle orange">
                                             <div class="flex">
                                                 <p>
@@ -213,13 +252,13 @@
                                         </div>
                                     </div>
                                     <div class="audience-box">
-                                        <div class="image audience-object-image01">
+                                        <div class="image audience-object-image01 fn01">
                                             <span>1ST AUDIENCE</span>
                                         </div>
-                                        <div class="image audience-object-image02">
+                                        <div class="image audience-object-image02 fn02">
                                             <span>2ND AUDIENCE</span>
                                         </div>
-                                        <div class="image audience-object-image03">
+                                        <div class="image audience-object-image03 fn03">
                                             <span>3RD AUDIENCE</span>
                                         </div>
                                     </div>
@@ -240,16 +279,23 @@
                             </div>
                             <div class="text-area">
                                 <ul>
-                                    <li>애드테크가 비약적인 발전을 이루는 지금의 시대에도, 캠페인의 KPI를 위한 첫 단계(=설계)는 물론, 확보된 데이터에 대한 해석은 여전히 사람의 영역입니다.</li>
                                     <li>
-                                        머큐리프로젝트는 Campaign goal 설정과 Media mix 제안과 같은 Planning 영역은 물론, 겉으로 드러 나지 않는 Operation영역에서도 머큐리만의 노하우를 담아 전문
-                                        트레이딩팀에 의해 개별 캠페인 마다 맞춤 Trading Structure를 세우고, 마이크로 트레이딩 구조를 통해 Risk management를 수행하고 있습니다.
+                                        <span class="trs100">
+                                            The professional DSP(Demand Side Platform) & RTB(Real Time Bidding) trading experts are bringing out the best successful results of the campaign
+                                            performance.
+                                        </span>
+                                    </li>
+                                    <li>
+                                        <span class="trs100">
+                                            Beyond the planning scopes such as campaign goal definition and media mix proposal, MERCURY PROJECT by its in-house trading experts with fruitful
+                                            experiences, designs the customized trading structures, optimizes the platforms, and implements risk management under the micro monitoring strategy.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
                             <div class="operations-object" id="operations-object">
                                 <div class="operations-wrap">
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn01">
                                         <div class="circle grey">
                                             <div class="flex">
                                                 <p>
@@ -259,7 +305,7 @@
                                                 <span>Campaign Goal</span>
                                             </div>
                                         </div>
-                                        <div class="circle orange">
+                                        <div class="circle orange fn02">
                                             <div class="flex">
                                                 <p>
                                                     Operation<br />
@@ -272,7 +318,7 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="circle-wrap">
+                                    <div class="circle-wrap fn-none">
                                         <div class="circle orange before-arrow">
                                             <div class="flex">
                                                 <p>
@@ -304,7 +350,7 @@
                             </div>
                             <div class="text-area">
                                 <ul>
-                                    <li>머큐리프로젝트는 브랜드의 성공을 위한 미디어의 모든 과정을 담당합니다.</li>
+                                    <li><span class="trs100">MERCURY PROJECT provides the full scope of media services for the success and satisfaction of our brands.</span></li>
                                 </ul>
                             </div>
                             <div class="coverage-object" id="coverage-object">
@@ -319,68 +365,68 @@
                                             </span>
                                         </div>
                                         <div class="coverage-box-wrap">
-                                            <div class="coverage-box">
+                                            <div class="coverage-box fn01">
                                                 <span>tracking<br />solution </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image01.png" />
+                                                    <img src="../../img/coverage-object-image01.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image02.png" />
+                                                    <img src="../../img/coverage-object-image02.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image03.png" />
+                                                    <img src="../../img/coverage-object-image03.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image04.png" />
+                                                    <img src="../../img/coverage-object-image04.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image05.png" />
+                                                    <img src="../../img/coverage-object-image05.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image06.png" />
+                                                    <img src="../../img/coverage-object-image06.png" />
                                                 </span>
                                             </div>
-                                            <div class="coverage-box">
+                                            <div class="coverage-box fn02">
                                                 <span
                                                     >Media<br />
                                                     buying<br />
                                                     solution
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image07.png" />
+                                                    <img src="../../img/coverage-object-image07.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image08.png" />
+                                                    <img src="../../img/coverage-object-image08.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image09.png" />
+                                                    <img src="../../img/coverage-object-image09.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image10.png" />
+                                                    <img src="../../img/coverage-object-image10.png" />
                                                 </span>
                                             </div>
-                                            <div class="coverage-box">
+                                            <div class="coverage-box fn03">
                                                 <span
                                                     >Analytics<br />
                                                     Solution</span
                                                 >
                                                 <span>
-                                                    <img src="../img/coverage-object-image11.png" />
+                                                    <img src="../../img/coverage-object-image11.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image12.png" />
+                                                    <img src="../../img/coverage-object-image12.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image13.png" />
+                                                    <img src="../../img/coverage-object-image13.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image14.png" />
+                                                    <img src="../../img/coverage-object-image14.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image15.png" />
+                                                    <img src="../../img/coverage-object-image15.png" />
                                                 </span>
                                                 <span>
-                                                    <img src="../img/coverage-object-image16.png" />
+                                                    <img src="../../img/coverage-object-image16.png" />
                                                 </span>
                                             </div>
                                         </div>
@@ -406,8 +452,11 @@
                             <div class="text-area">
                                 <ul>
                                     <li>
-                                        머큐리의 다각적 어날리틱스 리포팅 시스템은 단순한 수치 보고가 아닌 Next step을 위한 다각적인 인사이트 도출과 분석 영역의 확대를 통해, 더욱 의미 있는 리포팅을
-                                        제공합니다.
+                                        <span class="trs100">
+                                            MERCURY PROJECT provides various type of campaign reporting via multi degree measurements and analysis.<br />
+                                            The high-definition report of MERCURY PROJECT contains not only the simple KPI figures but also deep-dived insights and the expanded scope of the analytics
+                                            for the next step of the campaign.
+                                        </span>
                                     </li>
                                 </ul>
                             </div>
@@ -417,8 +466,8 @@
                                         <dt class="image"></dt>
                                         <dd>Insight Report</dd>
                                         <dd>
-                                            Dv360을 활용한 오디언스 분석<br />
-                                            캠페인 유니크 리치 및 주요 노출 채널 분석 등
+                                            Audience profile analysis, utilizing DV360<br />
+                                            Unique reach & major channels of exposure analysis.
                                         </dd>
                                     </dl>
 
@@ -426,16 +475,18 @@
                                         <dt class="image"></dt>
                                         <dd>Campaign Manager</dd>
                                         <dd>
-                                            Assisted Conversion 및 주요 전환 경로 분석<br />
-                                            광고 노출과 구매까지의 Time Log 분석 등
+                                            Assisted conversion & major conversion path analysis<br />
+                                            Time lag analysis from the first ad exposure<br />
+                                            to the final conversion.
                                         </dd>
                                     </dl>
                                     <dl class="analysis site">
                                         <dt class="image"></dt>
                                         <dd>Site & App <span>구조 분석</span></dd>
                                         <dd>
-                                            광고를 넘어 사이트 및 앱 전환 효율 구조 분석<br />
-                                            기술적 점검을 통한 사이트 및 앱 전화 테스트
+                                            Site & App’s internal conversion path analysis, beyond <br />
+                                            the advertising campaign analysis<br />
+                                            Technical test of sites & apps, and optimization.
                                         </dd>
                                     </dl>
                                 </div>
@@ -456,138 +507,145 @@
                             <div class="clients-object" id="clients-object">
                                 <div class="clients-wrap">
                                     <span>
-                                        <img src="../img/clients-object-images01.png" />
+                                        <img src="../../img/clients-object-images01.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images02.png" />
+                                        <img src="../../img/clients-object-images02.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images03.png" />
+                                        <img src="../../img/clients-object-images03.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images04.png" />
+                                        <img src="../../img/clients-object-images04.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images05.png" />
+                                        <img src="../../img/clients-object-images05.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images06.png" />
+                                        <img src="../../img/clients-object-images06.png" />
                                     </span>
                                     <!-- 추가된 이미지 -->
                                     <span>
-                                        <img src="../img/clients-object-images32.png" />
+                                        <img src="../../img/clients-object-images32.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images33.png" />
+                                        <img src="../../img/clients-object-images33.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images34.png" />
+                                        <img src="../../img/clients-object-images34.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images35.png" />
+                                        <img src="../../img/clients-object-images35.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images36.png" />
+                                        <img src="../../img/clients-object-images36.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images37.png" />
+                                        <img src="../../img/clients-object-images37.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images38.png" />
+                                        <img src="../../img/clients-object-images38.png" />
                                     </span>
                                     <!-- //추가된 이미지 -->
                                     <span>
-                                        <img src="../img/clients-object-images07.png" />
+                                        <img src="../../img/clients-object-images07.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images08.png" />
+                                        <img src="../../img/clients-object-images08.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images09.png" />
+                                        <img src="../../img/clients-object-images09.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images10.png" />
+                                        <img src="../../img/clients-object-images10.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images11.png" />
+                                        <img src="../../img/clients-object-images11.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images12.png" />
+                                        <img src="../../img/clients-object-images12.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images13.png" />
+                                        <img src="../../img/clients-object-images13.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images14.png" />
+                                        <img src="../../img/clients-object-images14.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images15.png" />
+                                        <img src="../../img/clients-object-images15.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images16.png" />
+                                        <img src="../../img/clients-object-images16.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images17.png" />
+                                        <img src="../../img/clients-object-images17.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images18.png" />
+                                        <img src="../../img/clients-object-images18.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images19.png" />
+                                        <img src="../../img/clients-object-images19.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images20.png" />
+                                        <img src="../../img/clients-object-images20.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images21.png" />
+                                        <img src="../../img/clients-object-images21.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images22.png" />
+                                        <img src="../../img/clients-object-images22.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images23.png" />
+                                        <img src="../../img/clients-object-images23.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images24.png" />
+                                        <img src="../../img/clients-object-images24.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images25.png" />
+                                        <img src="../../img/clients-object-images25.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images26.png" />
+                                        <img src="../../img/clients-object-images26.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images27.png" />
+                                        <img src="../../img/clients-object-images27.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images28.png" />
+                                        <img src="../../img/clients-object-images28.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images29.png" />
+                                        <img src="../../img/clients-object-images29.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images30.png" />
+                                        <img src="../../img/clients-object-images30.png" />
                                     </span>
                                     <span>
-                                        <img src="../img/clients-object-images31.png" />
+                                        <img src="../../img/clients-object-images31.png" />
                                     </span>
                                 </div>
                             </div>
                         </div>
                     </section>
                     <!-- //Clients 영역 -->
-                </div>
-                <div class="submit">
-                    <a href="#none" class="button" onclick="openPopup(popup)">문의하기</a>
-                </div>
-                <div class="footer">
-                    <a href="#none">개인정보 처리방침</a>
-                    <p>Copyright ⓒ 2021 Mercury Project All rights reserved</p>
+
+                    <!-- copyright 영역 -->
+                    <section class="section">
+                        <div class="section-wrapper none-pd">
+                            <div class="submit">
+                                <a href="#none" class="button" onclick="openPopup(popup)">Contact us</a>
+                            </div>
+                            <div class="footer">
+                                <a href="#none">Privacy policy</a>
+                                <p>Copyright ⓒ 2021 Mercury Project All rights reserved</p>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- //copyright 영역 -->
                 </div>
             </div>
         </div>
         <div class="ly-iframe-wrap">
-            <iframe src="menu.html" id="globalMenu"></iframe>
+            <iframe src="./menu.html" id="globalMenu"></iframe>
         </div>
 
         <div class="dimmer" id="popup">
@@ -597,7 +655,7 @@
                         <div class="title-area-left">문의하기</div>
                         <div class="title-area-right">
                             <a href="javascript:void(0)" onclick="closePopup(popup)">
-                                <img src="../img/popup-close.png" />
+                                <img src="../../img/popup-close.png" />
                             </a>
                         </div>
                     </div>
@@ -710,7 +768,7 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: "header.html",
+                url: "./header.html",
 
                 //조회 성공일때
                 success: function (result) {
@@ -728,5 +786,11 @@
                 timeout: 100000,
             });
         });
+
+        $(".clients-wrap").masonry({
+            itemSelector: "span",
+            isFitWidth: true,
+        });
     </script>
+    <script src="../../js/animation-trigger.js"></script>
 </html>

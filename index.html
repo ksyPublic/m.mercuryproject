@@ -4,52 +4,10 @@
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
-        <link rel="stylesheet" href="scss/style.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="js/common.js" defer></script>
+        <script>
+            window.location.href = "./pages/kr/main.html";
+        </script>
         <title>머큐리프로젝트 - 모바일</title>
     </head>
-    <body>
-        <div class="app">
-            <div class="main-visual">
-                <div class="main-visual-wrapper"></div>
-            </div>
-            <div class="footer"></div>
-        </div>
-        <div class="ly-iframe-wrap">
-            <iframe src="pages/menu.html" id="globalMenu"></iframe>
-        </div>
-    </body>
-    <script>
-        $(document).ready(function () {
-            $.ajax({
-                url: "pages/header.html",
-
-                //조회 성공일때
-                success: function (result) {
-                    $(".app").append(result);
-
-                    const header = document.querySelector("#header");
-
-                    if (header) {
-                        header.style.backgroundColor = "transparent";
-                    }
-                },
-
-                beforeSend: function () {},
-
-                complete: function () {
-                    //스플래시 실행시 페이지 1번에서 실행 이후 쿠키 작업예정
-                },
-
-                error: function (e) {},
-
-                timeout: 100000,
-            });
-        });
-    </script>
+    <body></body>
 </html>

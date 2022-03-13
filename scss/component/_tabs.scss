@@ -1,14 +1,17 @@
 .tabs {
     margin-top: 1rem;
+
     .tabs-title-wrap {
-        margin-left: 0.5rem;
+        max-width: 27.5rem;
         width: 100%;
         text-align: center;
+        margin: 0 auto;
         ul {
             font-size: 0;
+            margin-right: -1rem;
             li {
                 margin-right: 1rem;
-                width: 5.6rem;
+                width: 5.7rem;
                 display: inline-block;
                 vertical-align: top;
                 margin-bottom: 1.15rem;
@@ -18,91 +21,91 @@
                         &1 {
                             //
                             background: url("../img/icon-gle-plat01-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &2 {
                             //
                             background: url("../img/icon-gle-plat02-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &3 {
                             //
                             background: url("../img/icon-gle-plat03-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &4 {
                             //
                             background: url("../img/icon-gle-plat04-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &5 {
                             //
                             background: url("../img/icon-gle-plat05-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &6 {
                             //
                             background: url("../img/icon-gle-plat06-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &7 {
                             //
                             background: url("../img/icon-gle-plat07-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &8 {
                             //
                             background: url("../img/icon-gle-plat08-on.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                     }
                 }
                 a {
                     display: block;
-                    width: 5.6rem;
-                    height: 5.6rem;
+                    width: 5.7rem;
+                    height: 5.7rem;
                     transition: background 0.4s ease-out;
 
                     &.icon-gle-plat0 {
                         &1 {
                             //
                             background: url("../img/icon-gle-plat01.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &2 {
                             //
                             background: url("../img/icon-gle-plat02.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &3 {
                             //
                             background: url("../img/icon-gle-plat03.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &4 {
                             //
                             background: url("../img/icon-gle-plat04.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &5 {
                             //
                             background: url("../img/icon-gle-plat05.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &6 {
                             //
                             background: url("../img/icon-gle-plat06.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &7 {
                             //
                             background: url("../img/icon-gle-plat07.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                         &8 {
                             //
                             background: url("../img/icon-gle-plat08.png") no-repeat;
-                            background-size: 5.6rem 5.6rem;
+                            background-size: 5.7rem 5.7rem;
                         }
                     }
                 }
@@ -111,6 +114,7 @@
     }
 
     .tabs-content-wrap {
+        height: 29rem;
         .tabs-content {
             display: none;
             &.active {

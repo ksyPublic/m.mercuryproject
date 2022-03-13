@@ -10,8 +10,33 @@
         bottom: 2.1rem;
         font-size: 0px;
         width: 100%;
+        max-width: 30.9rem;
         left: 50%;
         transform: translateX(-50%);
+        &.--active {
+            .tech-box {
+                &.top {
+                    opacity: 1;
+                    transition-delay: 1.9s;
+                    transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    top: -13.8rem;
+                }
+
+                &.left {
+                    opacity: 1;
+                    transition-delay: 2.4s;
+                    transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), left 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    left: 0;
+                }
+
+                &.right {
+                    right: 0;
+                    opacity: 1;
+                    transition-delay: 2.4s;
+                    transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), right 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                }
+            }
+        }
         .tech-box {
             position: absolute;
             bottom: 0;
@@ -21,11 +46,14 @@
             }
 
             &.top {
-                top: -13.8rem;
+                top: 0;
                 width: 8.1rem;
                 height: 8.1rem;
                 background: url("../img/tech-object01.png") no-repeat;
                 background-size: 100%;
+                opacity: 0;
+                transition-delay: 1.9s;
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), top 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
 
                 &:after {
                     content: "";
@@ -45,9 +73,11 @@
                 height: 8.1rem;
                 background: url("../img/tech-object02.png") no-repeat;
                 background-size: 100%;
-                &.tech {
-                    left: 0;
-                }
+
+                opacity: 0;
+                transition-delay: 2.4s;
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), left 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+
                 &:after {
                     content: "or";
                     position: absolute;
@@ -85,9 +115,10 @@
                 background: url("../img/tech-object04.png") no-repeat;
                 background-size: 100%;
                 right: 25%;
-                &.tech {
-                    right: 0;
-                }
+
+                opacity: 0;
+                transition-delay: 2.4s;
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), right 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
             }
 
             span {
@@ -176,6 +207,59 @@
     font-size: 0;
     display: flex;
     justify-content: center;
+
+    &.fn01,
+    &.fn03 {
+        .circle {
+            opacity: 0;
+            transform: translateX(5rem);
+            transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            + .circle {
+                opacity: 0;
+                transform: translateX(-5rem);
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                &.grey {
+                    &:before {
+                        opacity: 0;
+                        transform: scale(0) rotate(0deg);
+                        transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    }
+                }
+
+                &.orange {
+                    &:before {
+                        opacity: 0;
+                        transform: scale(0) rotate(0deg);
+                        transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                    }
+                }
+            }
+        }
+        &.--active {
+            .circle {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            }
+            .circle + .circle.grey:before {
+                opacity: 1;
+                transform: scale(1) rotate(360deg);
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            }
+
+            .circle + .circle.orange:before {
+                opacity: 1;
+                transform: scale(1) rotate(360deg);
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            }
+
+            .circle + .circle.grey {
+                opacity: 1;
+                transform: translateX(0);
+                transition: opacity 1s cubic-bezier(0.455, 0.03, 0.515, 0.955), transform 0.8s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+            }
+        }
+    }
     .circle-multi {
         position: relative;
         .circle {
@@ -350,26 +434,21 @@
         }
     }
 }
-
+.clients-object {
+    // margin-left: 2rem;
+    margin-right: -2rem;
+}
 .clients-wrap {
-    margin-left: -0.5rem;
-    margin-top: -0.5rem;
-    margin-bottom: -2rem;
     font-size: 0;
     text-align: center;
-    // margin-left: 2rem;
-    &:after {
-        content: "";
-        clear: both;
-        display: block;
-    }
+    margin: 0 auto;
 
     span {
-        display: block;
+        display: inline-block;
+        vertical-align: top;
         width: 8rem;
         height: 8rem;
-        float: left;
-        margin-left: 2rem;
+        margin-right: 2rem;
         margin-bottom: 2rem;
     }
 }
@@ -512,7 +591,6 @@
                 margin-right: 1.5rem;
                 display: inline-block;
                 vertical-align: top;
-                background-color: $white;
                 &:first-child {
                     margin-left: -6rem;
                 }

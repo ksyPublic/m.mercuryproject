@@ -84,31 +84,6 @@
     init();
 })(window);
 
-function singleScenesUpdate(trigger, durations, animation, controllers, uniqueId) {
-    const allScened = new ScrollMagic.Scene({
-        triggerElement: trigger,
-        duration: durations,
-    })
-        .setTween(animation)
-        .addTo(controllers);
-}
-
-function multipleScrenesUpdate(trigger, durations, animation, controllers, uniqueId) {
-    const allScened = new ScrollMagic.Scene({
-        triggerElement: [].forEach.call(trigger, function (x) {
-            return x;
-        }),
-        duration: durations,
-    })
-        .setTween(animation)
-        .addTo(controllers)
-        .addIndicators({
-            name: [].forEach.call(uniqueId, function (x) {
-                return x;
-            }),
-        });
-}
-
 //메뉴 클릭시 애니메이션을 표현을 위해 만든 함수
 function clickMenuFocus(props) {
     const menu = window.parent.document.querySelector(".header .gnb");
@@ -124,11 +99,15 @@ function clickMenuFocus(props) {
         _childBox.classList.remove("open");
 
         if (props === "WWD") {
-            window.parent.location.href = "../pages/whatwedo.html";
+            window.parent.location.href = "./whatwedo.html";
         } else if (props === "WWA") {
-            window.parent.location.href = "../pages/whoweare.html";
+            window.parent.location.href = "./whoweare.html";
+        } else if (props === "KR") {
+            window.parent.location.href = "../kr/main.html";
+        } else if (props === "ENG") {
+            window.parent.location.href = "../eng/main.html";
         } else {
-            window.parent.location.href = "../pages/contactus.html";
+            window.parent.location.href = "./contactus.html";
         }
     }
 }

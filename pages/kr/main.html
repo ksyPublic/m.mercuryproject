@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="ko">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no" />
+        <link rel="stylesheet" href="../../scss/style.css" />
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+        <script src="../../js/vendor/gsap.js"></script>
+        <script src="../../js/vendor/gsap-scrollTrigger.js"></script>
+        <script src="../../js/vendor/locomotive.min.js"></script>
+        <script src="https://masonry.desandro.com/masonry.pkgd.js"></script>
+        <script src="../../js/common.js" defer></script>
+        <title>머큐리프로젝트 - 모바일</title>
+    </head>
+    <body class="kr">
+        <div class="app">
+            <div class="main-visual">
+                <div class="main-visual-wrapper">
+                    <div class="visual">
+                        <div class="logo-visual">
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                            <span></span>
+                        </div>
+                        <div class="visual-text">
+                            <span class="logo-top">
+                                <ul>
+                                    <li class="logo-text img01"></li>
+                                    <li class="logo-text img02"></li>
+                                    <li class="logo-text img03"></li>
+                                    <li class="logo-text img04"></li>
+                                    <li class="logo-text img05"></li>
+                                    <li class="logo-text img06"></li>
+                                    <li class="logo-text img07"></li>
+                                </ul>
+                            </span>
+                            <span class="logo-bottom">
+                                <ul>
+                                    <li class="logo-text img01"></li>
+                                    <li class="logo-text img02"></li>
+                                    <li class="logo-text img03"></li>
+                                    <li class="logo-text img04"></li>
+                                    <li class="logo-text img05"></li>
+                                    <li class="logo-text img06"></li>
+                                    <li class="logo-text img07"></li>
+                                </ul>
+                            </span>
+                            <span class="small">INSPIRATIONS THROUGH MEDIA</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="footer"></div>
+        </div>
+        <div class="ly-iframe-wrap">
+            <iframe src="./menu.html" id="globalMenu"></iframe>
+        </div>
+    </body>
+    <script>
+        $(document).ready(function () {
+            $.ajax({
+                url: "./header.html",
+
+                //조회 성공일때
+                success: function (result) {
+                    $(".app").append(result);
+
+                    const header = document.querySelector("#header");
+
+                    if (header) {
+                        header.style.backgroundColor = "transparent";
+                    }
+                },
+
+                beforeSend: function () {},
+
+                complete: function () {
+                    //스플래시 실행시 페이지 1번에서 실행 이후 쿠키 작업예정
+                },
+
+                error: function (e) {},
+
+                timeout: 100000,
+            });
+        });
+    </script>
+</html>

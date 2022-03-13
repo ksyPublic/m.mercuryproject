@@ -1,26 +1,25 @@
 <!DOCTYPE html>
-<html lang="ko">
+<html lang="eng">
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <link rel="stylesheet" href="../scss/style.css" />
+        <link rel="stylesheet" href="../../scss/style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/ScrollMagic.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/debug.addIndicators.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/gsap/2.1.3/TweenMax.min.js"></script>
-        <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.5/plugins/animation.gsap.js"></script>
-        <script src="../js/common.js" defer></script>
+        <script src="../../js/vendor/gsap.js"></script>
+        <script src="../../js/vendor/gsap-scrollTrigger.js"></script>
+        <script src="../../js/vendor/locomotive.min.js"></script>
+        <script src="../../js/common.js" defer></script>
 
         <title>머큐리프로젝트 - 모바일</title>
     </head>
-    <body>
+    <body class="eng">
         <div class="app">
             <div class="ly-container">
-                <div class="ly-contents">
+                <div class="ly-contents" data-scroll-container>
                     <!-- address 영역 -->
-                    <section class="section" id="address">
-                        <div class="section-wrapper">
+                    <section class="section" id="address" style="height: 100vh">
+                        <div class="section-wrapper" style="height: auto">
                             <div class="flex">
                                 <div class="title-area">
                                     <h2 class="title">address</h2>
@@ -28,12 +27,16 @@
                                 </div>
                             </div>
                             <div class="address-contents">
-                                <p>서울특별시 강남구 역삼동 봉은사로<br />38길 13 3,4,5층<br />sales@mercuryproject.com</p>
+                                <p>
+                                    3rd, 4th, 5th floor, 13, Bongeunsa-ro 38-gil,<br />
+                                    Gangnam-gu, Seoul, Republic of Korea<br />
+                                    sales@mercuryproject.com<br />
+                                </p>
                                 <a href="tel:02.565.0829">02.565.0829</a>
                             </div>
                         </div>
                         <div class="address-img">
-                            <img src="../img/address-bg.png" />
+                            <img src="../../img/address-eng-bg.png" />
                         </div>
                     </section>
                     <!-- address 영역 -->
@@ -56,7 +59,7 @@
                                 </ul>
                             </div>
                             <div class="submit">
-                                <a href="#none" class="button" onclick="openPopup(popup)">문의하기</a>
+                                <a href="#none" class="button" onclick="openPopup(popup)">Contact us</a>
                             </div>
                         </div>
                     </section>
@@ -75,87 +78,90 @@
                                 <dl>
                                     <dt>PLATFROM STRATEGY TEAM</dt>
                                     <dd>
-                                        <h4>담당업무</h4>
-                                        <span>캠페인 목표 설정을 위한 미디어 컨설팅</span>
-                                        <span>목표 설정에 따른 미디어 전략 수립과 바잉</span>
-                                        <span>통합적 데이터 매니징과 캠페인 효과 분석</span>
+                                        <h4>Roles &Responsibilities</h4>
+                                        <span>Setting up media KPI goals of campaigns.</span>
+                                        <span>Planning and buying the media to align with KPI goals</span>
+                                        <span>Managing and analyzing the integrated data to prove the result.</span>
                                     </dd>
                                     <dd>
-                                        <h4>자격요건 및 우대사항</h4>
-                                        <span>데이터 기반의 커뮤니케이션이 원활한 분</span>
-                                        <span>디지털 솔루션에 관심이 많은 분</span>
-                                        <span>새로운 시장의 변화를 능동적으로 흡수하는 분</span>
-                                        <span>자신만의 생각을 제안서로 잘 표현하는 분</span>
-                                        <span>미디어 플래너 및 디지털 AE 경력자</span>
+                                        <h4>Qualification Requirements</h4>
+                                        <span>The candidates should be familiar with data-driven communications.</span>
+                                        <span>The candidates should be keen to understand the comprehensive ad-tech solutions.</span>
+                                        <span>The candidates should actively absorb the new market trend.</span>
+                                        <span>The candidates should be professional at the documentation.</span>
+                                        <span>The candidates who have carrier experiences of either a media planner or an account executive at advertising agencies are preferred. </span>
                                     </dd>
                                 </dl>
                                 <dl>
                                     <dt>BRAND STRATEGY TEAM</dt>
                                     <dd>
-                                        <h4>담당업무</h4>
-                                        <span>시장의 트렌드 및 브랜드 포지셔닝 분석</span>
-                                        <span>브랜드 고객 세그먼트 및 캠페인 전략 구축</span>
-                                        <span>채널 콘텐츠 구성 전략 수립 및 운영</span>
+                                        <h4>Roles &Responsibilities</h4>
+                                        <span>Analyzing the market trends and brand positionings.</span>
+                                        <span>Planning the target segmentation and campaign strategies.</span>
+                                        <span>Planning channel contents strategies and operating.</span>
                                     </dd>
                                     <dd>
-                                        <h4>자격요건 및 우대사항</h4>
-                                        <span>브랜드 및 시장에 대한 이해가 있는 분</span>
-                                        <span>설득이 아닌 해결을 위해 노력하는 분</span>
-                                        <span>자신만의 생각을 제안서로 잘 표현하는 분</span>
-                                        <span>전략적인 생각으로 시장 변화에 대응하는 분</span>
-                                        <span>디지털 AE 및 브랜드 매니저 경력자</span>
+                                        <h4>Qualification Requirements</h4>
+                                        <span>The candidates should have comprehensive understandings about brands and markets.</span>
+                                        <span>The candidates should make an effort not for the persuasions but the solutions.</span>
+                                        <span>The candidates should be professional at the proposal documentations.</span>
+                                        <span>The candidates should strategically well response to changes in market. </span>
+                                        <span>The candidates who have carrier experiences of either an account executive or brand managers are preferred. </span>
                                     </dd>
                                 </dl>
                                 <dl>
-                                    <dt>PLATFROM STRATEGY TEAM</dt>
+                                    <dt>TECH TEAM</dt>
                                     <dd>
-                                        <h4>담당업무</h4>
-                                        <span>웹 및 앱 EVENT 설계 및 Tracking System 설치</span>
-                                        <span>외부 Marketing Tool과 Tracking System 연동</span>
-                                        <span>Tracking System data 정합성 모니터링</span>
-                                        <span>데이터 파이프라인, 웨어하우스 환경 구축 및 운영</span>
+                                        <h4>Roles &Responsibilities</h4>
+                                        <span>Designing events in web and app, and installing tracking solutions.</span>
+                                        <span>Integrating the 3rd party marketing tools with tracking solutions.</span>
+                                        <span>Strategically analyzing the data, utilizing various professional solutions.</span>
+                                        <span>Data integrity test of tracking solutions.</span>
+                                        <span>Designing data pipeline, developing data warehouse, and operating.</span>
+                                        <span>Developing ad-tech solutions,</span>
                                     </dd>
                                     <dd>
-                                        <h4>자격요건 및 우대사항</h4>
-                                        <span>웹 개발 업무 3년 경력</span>
-                                        <span>Java 및 Spring 관련 경험</span>
+                                        <h4>Qualification Requirements</h4>
+                                        <span>Minimum 3 years of web development work experiences.</span>
+                                        <span>Professional work skills about Java and Spring.</span>
+                                        <span>Comprehensive und erstandings of front-end side such as javascript, html, and css. </span>
+                                        <span>Work experiences of python based web framework.</span>
+                                        <span>Work experiences of co-developing using Github.</span>
                                         <span>
-                                            Javascript, html, css, 등 frontend side에 대한<br />
-                                            전반적 이해를 갖춘 분
+                                            Work experiences of eco-system development or integrations about global ad-tech platforms such as Google Marketing Platform, Google Ads, Facebook/Instagram,
+                                            Google Analytics, Google Tag
                                         </span>
-                                        <span>Python 기반 웹프레임워크 경험이 있으신 분</span>
-                                        <span>Github을 사용 및 개발 협업 경험이 있으신 분</span>
-                                        <span>
-                                            글로벌 광고 플랫폼 개발 및 연동 경험자<br />
-                                            (GMP, Facebook, GA, GTM, Appsflyer 등)
-                                        </span>
-                                        <span>디지털 광고 산업에 대한 전반적인 이해와 관심</span>
-                                        <span>적극적으로 서비스 개선에 필요한 업무를 찾고<br />개선 의지 및 역량</span>
-                                        <span>vue front framework</span>
+                                        <span>Manager, Appsflyer, and etc.</span>
+                                        <span>Work experiences of vue front framework.</span>
                                     </dd>
                                 </dl>
                             </div>
                         </div>
                     </section>
                     <!-- request 영역 -->
-                </div>
-                <div class="footer">
-                    <a href="#none">개인정보 처리방침</a>
-                    <p>Copyright ⓒ 2021 Mercury Project All rights reserved</p>
+
+                    <section class="section">
+                        <div class="section-wrapper none-pd">
+                            <div class="footer">
+                                <a href="#none">Privacy policy</a>
+                                <p>Copyright ⓒ 2021 Mercury Project All rights reserved</p>
+                            </div>
+                        </div>
+                    </section>
                 </div>
             </div>
         </div>
         <div class="ly-iframe-wrap">
-            <iframe src="menu.html" id="globalMenu"></iframe>
+            <iframe src="./menu.html" id="globalMenu"></iframe>
         </div>
         <div class="dimmer" id="popup">
             <div class="popup">
                 <div class="popup-header">
                     <div class="title-area">
-                        <div class="title-area-left">문의하기</div>
+                        <div class="title-area-left">Contact us</div>
                         <div class="title-area-right">
                             <a href="javascript:void(0)" onclick="closePopup(popup)">
-                                <img src="../img/popup-close.png" />
+                                <img src="../../img/popup-close.png" />
                             </a>
                         </div>
                     </div>
@@ -268,7 +274,7 @@
     <script>
         $(document).ready(function () {
             $.ajax({
-                url: "header.html",
+                url: "./header.html",
 
                 //조회 성공일때
                 success: function (result) {
@@ -287,4 +293,5 @@
             });
         });
     </script>
+    <script src="../../js/animation-trigger.js"></script>
 </html>
