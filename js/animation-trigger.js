@@ -404,16 +404,16 @@ function gsap_all_animation() {
     }
 
     if (coverage_box_wrap) {
-        gsap.timeline({
-            scrollTrigger: {
-                trigger: ".coverage-box",
-                scroller: "[data-scroll-container]",
-                end: "+=100%",
-                scrub: true,
-            },
-        }).fromTo(".coverage-box", 1, { y: 40, stagger: 0.2 }, { y: 0, stagger: 0.2 });
+        // gsap.timeline({
+        //     scrollTrigger: {
+        //         trigger: ".coverage-box",
+        //         scroller: "[data-scroll-container]",
+        //         end: "+=100%",
+        //         scrub: true,
+        //     },
+        // }).fromTo(".coverage-box", 1, { y: 40, stagger: 0.2 }, { y: 0, stagger: 0.2 });
 
-        const coverageBox = gsap.utils.toArray(".coverage-box.fn01 span");
+        const coverageBox = gsap.utils.toArray(".coverage-box span");
         coverageBox.forEach((box, index) => {
             gsap.from(box, {
                 scrollTrigger: {
@@ -423,23 +423,7 @@ function gsap_all_animation() {
                     end: "+=100%",
                     //onUpdate: (self) => console.log(self.direction),
                 },
-                translateX: -80,
-                opacity: 0,
-                ease: "power2",
-            });
-        });
-
-        const coverageBox3 = gsap.utils.toArray(".coverage-box.fn03 span");
-        coverageBox3.forEach((box, index) => {
-            gsap.from(box, {
-                scrollTrigger: {
-                    trigger: box,
-                    scroller: "[data-scroll-container]",
-                    scrub: true,
-                    end: "+=100%",
-                    //onUpdate: (self) => console.log(self.direction),
-                },
-                translateX: 80,
+                translateY: 40,
                 opacity: 0,
                 ease: "power2",
             });
