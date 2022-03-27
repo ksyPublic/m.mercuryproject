@@ -4,6 +4,7 @@
     //tab
     const tabsTarget = document.querySelectorAll(".tabs-title-wrap ul li");
     const tabsContent = document.querySelectorAll(".tabs-content-wrap .tabs-content");
+    const privacy = document.querySelector(".privacy .popup-contents");
 
     //button
     const buttonGroup = document.querySelectorAll(".button-group .button");
@@ -50,6 +51,13 @@
         e.target.classList.toggle("active");
     }
 
+    function scrollHandler(e) {
+        if (e.target.offsetHeight + e.target.scrollTop >= e.target.scrollHeight) {
+            const items = e.target.closest(".dimmer");
+            items.classList.remove("open");
+        }
+    }
+
     function eventbindFunc() {
         document.addEventListener("click", function (e) {
             if (e.target.classList.contains("gnb-menu")) {
@@ -73,6 +81,10 @@
             [].forEach.call(tabsTarget, function (x, index) {
                 x.addEventListener("click", tabsClickedFunc(index), false);
             });
+        }
+
+        if (privacy) {
+            privacy.addEventListener("scroll", scrollHandler, false);
         }
     }
 

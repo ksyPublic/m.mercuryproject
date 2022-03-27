@@ -148,6 +148,11 @@
 .viewability-object {
     text-align: center;
     .viewability-text-area {
+        &.black {
+            .text {
+                color: #000;
+            }
+        }
         + .circle-wrap {
             margin-top: 0.7rem;
         }
@@ -396,8 +401,9 @@
             transform: translate(-50%, -50%);
         }
         p {
-            font-size: 1.2rem;
-            line-height: 1.5rem;
+            font-size: 1.3rem;
+            line-height: 1.4rem;
+            letter-spacing: -0.03rem;
             font-weight: bold;
         }
         span {
@@ -515,6 +521,32 @@
     margin-top: 8.2rem;
     margin-bottom: 4.4rem;
     .coverage-wrap {
+        .cover-list-wrap {
+            position: relative;
+            display: flex;
+            width: 100%;
+            max-width: 19.2rem;
+            margin: 2.9rem auto;
+            .cover-list {
+                flex: 1 1 0;
+                + .cover-list {
+                    flex: none;
+                    margin-left: auto;
+                    text-align: right;
+                }
+                ul {
+                    li {
+                        margin-top: 0.4rem;
+                        &:first-child {
+                            margin-top: 0;
+                        }
+                        font-size: 1.1rem;
+                        font-weight: 400;
+                        font-family: "spq", sans-serif;
+                    }
+                }
+            }
+        }
         .polygon {
             margin: 0 auto;
             &.top {
@@ -632,6 +664,10 @@
 }
 
 .audience-wrap {
+    .circle-wrap .circle p {
+        font-size: 1.2rem;
+        line-height: 1.5rem;
+    }
     .audience-box {
         margin-top: 2rem;
         display: flex;
