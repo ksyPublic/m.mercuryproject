@@ -3,7 +3,7 @@
     <head>
         <meta charset="UTF-8" />
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no" />
+        <meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width" />
         <link rel="stylesheet" href="../../scss/style.css" />
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
         <script src="../../js/vendor/gsap.js"></script>
@@ -442,6 +442,7 @@
             </div>
         </div>
 
+        <!-- 문의하기 -->
         <div class="dimmer" id="popup">
             <div class="popup">
                 <div class="popup-header">
@@ -558,11 +559,9 @@
                 </div>
             </div>
         </div>
+        <!-- //문의하기 -->
 
-        <div class="ly-iframe-wrap">
-            <iframe src="./menu.html" id="globalMenu"></iframe>
-        </div>
-
+        <!-- 개인정보 처리방침 -->
         <div class="dimmer" id="popup02">
             <div class="popup privacy">
                 <div class="popup-header">
@@ -727,6 +726,51 @@
                 </div>
             </div>
         </div>
+        <!-- //개인정보 처리방침 -->
+
+        <!-- 개인정보 수집동의 -->
+        <div class="dimmer" id="popup03">
+            <div class="popup privacy">
+                <div class="popup-header">
+                    <div class="title-area">
+                        <div class="title-area-left">개인정보 수집 및 이용동의</div>
+                        <div class="title-area-right">
+                            <a href="javascript:void(0)" onclick="closePopup(popup03)">
+                                <img src="../../img/popup-close.png" />
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="popup-contents">
+                    <div class="privacy-wrap">
+                        <ul>
+                            <li>
+                                <h4>개인정보의 수집·이용 목적</h4>
+                                머큐리프로젝트 광고 문의사항에 대한 답변을 드리기 위한 목적으로 귀하의 개인정보를 수집·이용 등 처리 합니다.
+                            </li>
+                            <li>
+                                <h4>수집하는 개인정보의 항목</h4>
+                                문의자의 이름, 연락처, 이메일, 소속(회사명/부서/직함)
+                            </li>
+                            <li>
+                                <h4>개인정보의 보유 및 이용기간</h4>
+                                회사는 원칙적으로 개인정보 수집 및 이용목적이 달성 된 후에는 해당 정보를 지체없이 파기합니다.<br />
+                                단, 관계법령의 규정에 의하여 보존할 필요가 있는 경우 회사는 관계법령이 정한 일정한 기간동안 개인정보를 보관합니다.
+                            </li>
+                            <li>
+                                <h4>개인정보 수집도의 거부</h4>
+                                귀하는 개인정보 수집 동의를 거부할 수 있으며, 이 경우 광고문의 답변이 제한됩니다.
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--//개인정보 수집동의 -->
+
+        <div class="ly-iframe-wrap">
+            <iframe src="./menu.html" id="globalMenu"></iframe>
+        </div>
     </body>
     <script>
         $(document).ready(function () {
@@ -752,7 +796,7 @@
             if (chk1) {
                 chk1.addEventListener("change", function (e) {
                     if (e.target.checked) {
-                        openPopup(popup02);
+                        openPopup(popup03);
                     }
                 });
             }

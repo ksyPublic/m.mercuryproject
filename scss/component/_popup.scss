@@ -26,6 +26,37 @@
 .popup {
     &.privacy {
         background-color: #e7e7e7;
+        &.type02 {
+            .popup {
+                &-header {
+                    height: auto;
+                    padding-bottom: 2.5rem;
+                    .title-area {
+                        align-items: flex-start;
+                        padding-top: 3rem;
+                        &-left {
+                            font-size: 1.8rem;
+                            line-height: 2rem;
+                            font-weight: bold;
+                            font-family: "spq", sans-serif;
+                        }
+                    }
+                }
+                &-contents {
+                    padding-top: 9.3rem;
+                    .privacy-wrap {
+                        h4 {
+                            font-size: 1.3rem;
+                        }
+                        ul {
+                            li {
+                                margin-top: 1.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
         .popup {
             &-header {
                 height: 7.5rem;
@@ -75,6 +106,14 @@
                             ol {
                                 &.float-ol {
                                     li {
+                                        &.fl-mgl-none {
+                                            i {
+                                                &::before {
+                                                    content: "-";
+                                                    margin-left: 0rem;
+                                                }
+                                            }
+                                        }
                                         display: block;
                                         p {
                                             display: flex;
@@ -128,6 +167,14 @@
         overflow-y: auto;
         padding-top: 10.7rem;
         position: relative;
+        .form + .button-group {
+            margin: 3rem 0 4rem 0;
+            button {
+                &:first-child {
+                    margin-left: 0;
+                }
+            }
+        }
     }
     &-header {
         background-color: #fff;

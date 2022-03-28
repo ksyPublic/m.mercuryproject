@@ -1,4 +1,4 @@
-// //elements
+//머큐리프로젝트 애니메이션 트리거
 const trs100 = document.querySelectorAll(".trs100");
 const object_earth = document.querySelector("#object01");
 const aboutus_background = document.querySelector(".aboutus");
@@ -404,15 +404,6 @@ function gsap_all_animation() {
     }
 
     if (coverage_box_wrap) {
-        // gsap.timeline({
-        //     scrollTrigger: {
-        //         trigger: ".coverage-box",
-        //         scroller: "[data-scroll-container]",
-        //         end: "+=100%",
-        //         scrub: true,
-        //     },
-        // }).fromTo(".coverage-box", 1, { y: 40, stagger: 0.2 }, { y: 0, stagger: 0.2 });
-
         const coverageBox = gsap.utils.toArray(".coverage-box span");
         coverageBox.forEach((box, index) => {
             gsap.from(box, {

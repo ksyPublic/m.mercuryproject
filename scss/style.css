@@ -461,6 +461,12 @@ html.has-scroll-dragging {
   opacity: 1;
 }
 
+.checkbox-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 input[type="tel"].input,
 input[type="time"].input,
 input[type="text"].input,
@@ -805,6 +811,37 @@ input[type="date"].input::placeholder {
   background-color: #e7e7e7;
 }
 
+.popup.privacy.type02 .popup-header {
+  height: auto;
+  padding-bottom: 2.5rem;
+}
+
+.popup.privacy.type02 .popup-header .title-area {
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  padding-top: 3rem;
+}
+
+.popup.privacy.type02 .popup-header .title-area-left {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  font-weight: bold;
+  font-family: "spq", sans-serif;
+}
+
+.popup.privacy.type02 .popup-contents {
+  padding-top: 9.3rem;
+}
+
+.popup.privacy.type02 .popup-contents .privacy-wrap h4 {
+  font-size: 1.3rem;
+}
+
+.popup.privacy.type02 .popup-contents .privacy-wrap ul li {
+  margin-top: 1.8rem;
+}
+
 .popup.privacy .popup-header {
   height: 7.5rem;
   background-color: #e7e7e7;
@@ -858,6 +895,11 @@ input[type="date"].input::placeholder {
   display: block;
 }
 
+.popup.privacy .popup-contents .privacy-wrap ul li ol.float-ol li.fl-mgl-none i::before {
+  content: "-";
+  margin-left: 0rem;
+}
+
 .popup.privacy .popup-contents .privacy-wrap ul li ol.float-ol li p {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -904,6 +946,14 @@ input[type="date"].input::placeholder {
   overflow-y: auto;
   padding-top: 10.7rem;
   position: relative;
+}
+
+.popup-contents .form + .button-group {
+  margin: 3rem 0 4rem 0;
+}
+
+.popup-contents .form + .button-group button:first-child {
+  margin-left: 0;
 }
 
 .popup-header {
@@ -2779,9 +2829,11 @@ textarea.textarea::placeholder {
 }
 
 .form-fields h2 {
+  line-height: 1.8rem;
   font-size: 1.4rem;
   font-family: "spq", sans-serif;
   font-weight: bold;
+  word-break: keep-all;
 }
 
 .form-fields .form-field {
@@ -2799,6 +2851,7 @@ textarea.textarea::placeholder {
 }
 
 .form-fields .form-field .button {
+  line-height: 1.5rem;
   margin-left: 1rem;
   width: calc(50% - 1rem);
   margin-bottom: 1rem;
