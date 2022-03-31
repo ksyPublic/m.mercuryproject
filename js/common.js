@@ -22,12 +22,14 @@
     function globalMenu(props) {
         const menu = document.querySelector(".header .gnb");
         const logo = document.querySelector(".header .logo");
+        const header = document.querySelector(".header");
         const menuWrapper = document.querySelector(".ly-iframe-wrap");
         const menuFrame = document.querySelector("#globalMenu");
 
         menu.classList.toggle("active");
         logo.classList.toggle("active");
         menuWrapper.classList.toggle("active");
+        header.classList.toggle("active");
         const _childBox = menuFrame.contentWindow.document.querySelector(".ly-menu");
 
         if (menu.classList.contains("active")) {
@@ -88,6 +90,7 @@
 function clickMenuFocus(props) {
     const menu = window.parent.document.querySelector(".header .gnb");
     const logo = window.parent.document.querySelector(".header .logo");
+    const header = window.parent.document.querySelector(".header");
     const menuWrapper = window.parent.document.querySelector(".ly-iframe-wrap");
 
     const _childBox = document.querySelector(".ly-menu");
@@ -96,6 +99,7 @@ function clickMenuFocus(props) {
         menu.classList.remove("active");
         logo.classList.remove("active");
         _childBox.classList.remove("open");
+        header.classList.remove("active");
 
         if (props === "WWD") {
             window.parent.location.href = "./whatwedo.html";

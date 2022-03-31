@@ -412,6 +412,12 @@
         background-size: 25.7rem 25.7rem;
     }
 }
+
+#request {
+    .submit {
+        padding: 0;
+    }
+}
 .section {
     &:last-child {
         .submit {

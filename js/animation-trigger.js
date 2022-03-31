@@ -411,7 +411,7 @@ function gsap_all_animation() {
                     trigger: box,
                     scroller: "[data-scroll-container]",
                     scrub: true,
-                    end: "+=100%",
+                    end: "+=40%",
                     //onUpdate: (self) => console.log(self.direction),
                 },
                 translateY: 40,
