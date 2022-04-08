@@ -390,10 +390,10 @@ html.has-scroll-dragging {
 }
 
 .c-scrollbar {
-  position: absolute;
+  position: fixed;
   top: 0;
   right: 0;
-  z-index: 99999;
+  z-index: 999;
   width: 11px;
   height: 100%;
   opacity: 0;
@@ -858,7 +858,7 @@ input[type="date"].input::placeholder {
 }
 
 .popup.privacy .popup-contents {
-  padding-top: 7.5rem;
+  height: calc(100% - 7.5rem);
 }
 
 .popup.privacy .popup-contents .privacy-wrap p {
@@ -878,7 +878,7 @@ input[type="date"].input::placeholder {
 }
 
 .popup.privacy .popup-contents .privacy-wrap ul li:last-child {
-  margin-bottom: 5rem;
+  margin-bottom: 10rem;
 }
 
 .popup.privacy .popup-contents .privacy-wrap ul li:first-child {
@@ -941,10 +941,9 @@ input[type="date"].input::placeholder {
 
 .popup-contents {
   padding: 0 2.5rem;
-  height: 100%;
+  height: calc(100% - 10.7rem);
   overflow-x: hidden;
   overflow-y: auto;
-  padding-top: 10.7rem;
   position: relative;
 }
 
@@ -959,10 +958,10 @@ input[type="date"].input::placeholder {
 .popup-header {
   background-color: #fff;
   padding: 0 2.5rem;
-  position: absolute;
+  position: relative;
   width: 100%;
   height: 10.7rem;
-  z-index: 999;
+  z-index: 9999;
 }
 
 .popup-header .title-area {
