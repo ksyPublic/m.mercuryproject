@@ -948,7 +948,7 @@ input[type="date"].input::placeholder {
 }
 
 .popup-contents .form + .button-group {
-  margin: 3rem 0 4rem 0;
+  margin: 3rem 0 10rem 0;
 }
 
 .popup-contents .form + .button-group button:first-child {
